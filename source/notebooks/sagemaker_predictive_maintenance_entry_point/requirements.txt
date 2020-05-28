@@ -1,0 +1,2 @@
+gluonnlp==0.9.1
+pandas==0.22
