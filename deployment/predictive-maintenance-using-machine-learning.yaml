@@ -178,7 +178,7 @@
                                 ";",
                                 ["cd /home/ec2-user/SageMaker",
                                     {
-                                        "Fn::Join": ["", ["aws s3 sync s3://",
+                                        "Fn::Join": ["", ["aws s3 cp s3://",
                                             {
                                                 "Fn::Join": ["-", [{
                                                     "Fn::FindInMap": ["Notebook", "PredictiveMaintenance", "S3Bucket"]
@@ -187,7 +187,7 @@
                                                 }]]
                                             }, {
                                                 "Fn::FindInMap": ["Notebook", "PredictiveMaintenance", "S3Key"]
-                                            }, " ."
+                                            }, "sagemaker_predictive_maintenance.ipynb ."
                                         ]]
                                     },
                                     {
